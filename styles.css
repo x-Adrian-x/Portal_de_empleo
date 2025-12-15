@@ -457,23 +457,21 @@ body.empleos {
         }
       }
     }
+
+    & > h2 {
+      margin-bottom: 1.5rem;
+    }
+
     section:nth-of-type(2) {
-      & > h2 {
-        margin-bottom: 1.5rem;
-      }
-
-      & > div:first-of-type {
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
-      }
-
-      & > div:last-of-type {
-        border-bottom-left-radius: 8px;
-        border-bottom-right-radius: 8px;
-      }
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
 
       & > div {
-        border: 1px solid var(--border);
+        border-top: 1px solid var(--border);
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
         display: grid;
         grid-template-columns: 1fr 100px;
         grid-template-areas:
@@ -483,6 +481,10 @@ body.empleos {
         gap: 0.5rem;
         padding: 1rem;
         cursor: pointer;
+      }
+
+      & > div:last-child {
+        border-bottom: 1px solid var(--border);
       }
 
       & > div > h3 {

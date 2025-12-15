@@ -12,6 +12,24 @@ contenedor?.addEventListener("click", (event) => {
   }
 });
 
+const select = document.getElementById("filtro-ubicacion");
+
+select?.addEventListener("change", (event) => {
+  const selectedUbicacion = event.target.value;
+  const ofertas = document.querySelectorAll(".contenedor-ofertas > div");
+
+  ofertas.forEach(oferta => {
+    const ubicacionSpan = oferta.querySelector(".ubicacion");
+    const ubicacion = ubicacionSpan.textContent;
+
+    if (selectedUbicacion === ubicacion) { 
+      oferta.style.display = "grid";
+    } else {
+      oferta.style.display = "none";
+    }
+  });
+});
+
 // contenedor?.addEventListener("keydown", (event) => {
 //   const elemento = event.target;
 

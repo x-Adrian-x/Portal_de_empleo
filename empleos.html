@@ -74,8 +74,11 @@
             <select name="" id="">
               <option value="">Tecnología</option>
             </select>
-            <select name="" id="">
-              <option value="">Ubicación</option>
+            <select name="" id="filtro-ubicacion">
+              <option value="" selected disabled>Ubicación</option>
+              <option value="Cartagena">Cartagena</option>
+              <option value="Guadalajara">Guadalajara</option>
+              <option value="Remoto">Remoto</option>
             </select>
             <select name="" id="">
               <option value="">Tipo de contrato</option>
@@ -86,11 +89,11 @@
           </div>
         </form>
       </section>
-      <section class="contenedor-ofertas">
-        <h2>Resultados de búsqueda</h2>
+      <h2>Resultados de búsqueda</h2>
+      <section class="contenedor-ofertas"> 
         <div tabindex="0" role="link">
           <h3>Ingeniero de Software</h3>
-          <p>Tech Solutions Inc. | Remoto</p>
+          <p>Tech Solutions Inc. | <span class="ubicacion">Remoto</span></p>
           <p>
             Buscamos ingeniero de desarrollo web y conocimientos en Javascript,
             React y Node.js. El candidato ideal debe ser capaz de trabajar en
@@ -100,7 +103,7 @@
         </div>
         <div tabindex="0" role="link">
           <h3>Analista de Datos</h3>
-          <p>Data Driven Co. | Ciudad de México</p>
+          <p>Data Driven Co. | <span class="ubicacion">Cartagena</span></p>
           <p>
             Estamos buscando un analista de datos con experiencia en el manejo
             de grandes conjuntos de datos y herramientas de visualización. Se
@@ -110,7 +113,7 @@
         </div>
         <div tabindex="0" role="link">
           <h3>Desarrollador de Aplicaciones Móviles</h3>
-          <p>Mobile Apps Ltd. | Guadalajara</p>
+          <p>Mobile Apps Ltd. | <span class="ubicacion">Guadalajara</span></p>
           <p>
             Buscamos un desarrolador de aplicaciones móviles con experiencia en iOS y/o Android. El candidato debe tener conocimientos en Swift, Kotlin y el desarrollo de interfaces de usuario.
           </p>
@@ -118,7 +121,7 @@
         </div>
         <div tabindex="0" role="link">
           <h3>Ingeniero DevOps</h3>
-          <p>Cloud Services SA | Remoto</p>
+          <p>Cloud Services SA | <span class="ubicacion">Remoto</span></p>
           <p>
             Estamos buscando un ingeniero de DevOps con experiencia en la gestión de infraestructura en la nube, automatización de procesos y herramientas de integración continua. Se requiere conocimientos en AWS, Azure o GCP.
           </p>
