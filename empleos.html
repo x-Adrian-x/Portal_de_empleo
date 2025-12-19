@@ -47,7 +47,7 @@
       <section>
         <h1>Encuentra tu próximo trabajo</h1>
         <p>Explora miles de oportunidades en el sector tecnológico.</p>
-        <form action="">
+        <form id="formulario-empleos">
           <label>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -66,24 +66,32 @@
               <path d="M21 21l-6 -6" />
             </svg>
             <input
+              id="buscador-empleos"
+              name="search"
               type="text"
               placeholder="Buscar por cargos, empresas o habilidades"
             />
           </label>
           <div>
-            <select name="" id="">
-              <option value="">Tecnología</option>
+            <select name="area" id="">
+              <button><selectedcontent></selectedcontent></button>
+              <option value="">Área</option>
             </select>
-            <select name="" id="filtro-ubicacion">
-              <option value="" selected disabled>Ubicación</option>
+            <select name="location" id="filtro-ubicacion">
+              <button><selectedcontent></selectedcontent></button>
+              <option value="" selected disabled hidden>Ubicación</option>
+              <option value="all">Todas</option>
               <option value="Cartagena">Cartagena</option>
               <option value="Guadalajara">Guadalajara</option>
               <option value="Remoto">Remoto</option>
             </select>
-            <select name="" id="">
+            <select name="contract" id="">
+              <button><selectedcontent></selectedcontent></button>
               <option value="">Tipo de contrato</option>
+              <option value="">Obra labor</option>
             </select>
-            <select name="" id="">
+            <select name="experience" id="">
+              <button><selectedcontent></selectedcontent></button>
               <option value="">Nivel de experiencia</option>
             </select>
           </div>
@@ -91,7 +99,7 @@
       </section>
       <h2>Resultados de búsqueda</h2>
       <section class="contenedor-ofertas"> 
-        <div tabindex="0" role="link">
+        <article tabindex="0" role="link" class="tarjeta-oferta">
           <h3>Ingeniero de Software</h3>
           <p>Tech Solutions Inc. | <span class="ubicacion">Remoto</span></p>
           <p>
@@ -100,8 +108,8 @@
             equipo y tener buenas habilidades de comunicación.
           </p>
           <button class="btn-aplicar">Aplicar</button>
-        </div>
-        <div tabindex="0" role="link">
+        </article>
+        <article tabindex="0" role="link" class="tarjeta-oferta">
           <h3>Analista de Datos</h3>
           <p>Data Driven Co. | <span class="ubicacion">Cartagena</span></p>
           <p>
@@ -110,23 +118,23 @@
             requiere conocimiento en SQL, Python y R.
           </p>
           <button class="btn-aplicar">Aplicar</button>
-        </div>
-        <div tabindex="0" role="link">
+        </article>
+        <article tabindex="0" role="link" class="tarjeta-oferta">
           <h3>Desarrollador de Aplicaciones Móviles</h3>
           <p>Mobile Apps Ltd. | <span class="ubicacion">Guadalajara</span></p>
           <p>
             Buscamos un desarrolador de aplicaciones móviles con experiencia en iOS y/o Android. El candidato debe tener conocimientos en Swift, Kotlin y el desarrollo de interfaces de usuario.
           </p>
           <button class="btn-aplicar">Aplicar</button>
-        </div>
-        <div tabindex="0" role="link">
+        </article>
+        <article tabindex="0" role="link" class="tarjeta-oferta">
           <h3>Ingeniero DevOps</h3>
           <p>Cloud Services SA | <span class="ubicacion">Remoto</span></p>
           <p>
             Estamos buscando un ingeniero de DevOps con experiencia en la gestión de infraestructura en la nube, automatización de procesos y herramientas de integración continua. Se requiere conocimientos en AWS, Azure o GCP.
           </p>
           <button class="btn-aplicar">Aplicar</button>
-        </div>
+        </article>
       </section>
       <nav class="pagination">
         <a href="#">
